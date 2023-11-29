@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <style>
+        .group-section{
+            padding-top: 100px;
+        }
+        #list {
+          list-style-type: none; 
+          color: blue;
+        }
+    </style>
+
+</head>
+<body>
+  <header class="header" data-header>
+    <div class="container">
+
+      <div class="overlay" data-overlay></div>
+
+      <a href="#" class="logo">
+       <h2>  Auto For Rental Car </h2>
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+
+             <li>
+                <a href="index.html" class="navbar-link" data-nav-link>Home</a>
+              </li>
+              <li>
+                <a href="contact_us.html" class="navbar-link" data-nav-link>Contact us</a>
+              </li>
+              <li>
+                <a href="Login.html" class="navbar-link" data-nav-link>Login</a>
+              </li>
+              <li>
+                <a href="about.html" class="navbar-link" data-nav-link>About</a>
+              </li>
+              <li>
+                <a href="studentMempers.html" class="navbar-link" data-nav-link>Student Member</a>
+              </li>
+              <li>
+                <a href="Registration.html" class="navbar-link" data-nav-link>Sign Up</a>
+              </li>
+
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+
+        <div class="header-contact">
+          <a href="tel:88002345678" class="contact-link">+966 50 860 2564</a>
+        </div>
+
+        <button class="nav-toggle-btn" data-nav-toggle-btn aria-label="Toggle Menu">
+          <span class="one"></span>
+          <span class="two"></span>
+          <span class="three"></span>
+        </button>
+
+      </div>
+
+    </div>
+    </header>
+    <section class="group-section">
+        <div class="container">
+          <ul id="list">
+          </ul>
+      
+          </div>
+    </section>
+
+    <section class="group-section">
+      <div class="container">
+        <table border="1"> 
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+          </tr>
+          <tr>
+            <td>LEENA SALEEM ALTURJAMI</td>
+            <td>leena@gmail.com</td>
+          </tr>
+          <tr>
+            <td>SALMA AIAD ALOQMANI</td>
+            <td>salma@gmail.com</td>
+          </tr>
+
+        </table>
+    
+        </div>
+    </section>
+    <section class="group-section">
+      <div class="container">
+        <video src="car.mp4"  style=" width: 75%;" controls autoplay >
+        </video>
+        <!-- <audio src="car.mp3"> </audio> -->
+        <audio src="car.mp3" controls>
+          Your browser does not support the audio element.
+        </audio>
+
+        </div>
+    </section>
+
+    <script>
+      const group = [
+          'LEENA SALEEM ALTURJAMI',
+          'SALMA AIAD ALOQMANI',
+      ];
+      const list = document.getElementById('list');
+
+      function shuffleArray(array) {
+          for (let i = array.length - 1; i > 0; i--) {
+              const j = Math.floor(Math.random() * (i + 1));
+              [array[i], array[j]] = [array[j], array[i]];
+          }
+          return array;
+      }
+      function printStudent() {
+          const shuffledMembers = shuffleArray(group);
+          list.innerHTML = '';
+          shuffledMembers.forEach((member) => {
+              const listItem = document.createElement('li');
+              listItem.textContent = member;
+              list.appendChild(listItem);
+          });
+      }
+
+      printStudent();
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="./assets/css/signUp.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+<body>
+  <header class="header" data-header>
+    <div class="container">
+
+      <div class="overlay" data-overlay></div>
+
+      <a href="#" class="logo">
+       <h2>  Auto For Rental Car </h2>
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+
+          <li>
+             <a href="index.html" class="navbar-link" data-nav-link>Home</a>
+           </li>
+           <li>
+             <a href="contact_us.html" class="navbar-link" data-nav-link>Contact us</a>
+           </li>
+           <li>
+             <a href="Login.html" class="navbar-link" data-nav-link>Login</a>
+           </li>
+           <li>
+            <a href="about.html" class="navbar-link" data-nav-link>About</a>
+          </li>
+          <li>
+            <a href="studentMempers.html" class="navbar-link" data-nav-link>Student Member</a>
+          </li>
+           <li>
+             <a href="Registration.html" class="navbar-link" data-nav-link>Sign Up</a>
+           </li>
+
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+
+        <div class="header-contact">
+          <a href="tel:88002345678" class="contact-link">+966 50 860 2564</a>
+
+        </div>
+        <button class="nav-toggle-btn" data-nav-toggle-btn aria-label="Toggle Menu">
+          <span class="one"></span>
+          <span class="two"></span>
+          <span class="three"></span>
+        </button>
+
+      </div>
+
+    </div>
+  </header>
+ 
+  <section class="signup">
+    <div class="container2">
+      <h2>Sign Up</h2>
+  
+      <form action="submit-form.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+  
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+  
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+  
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password" id="confirm-password" name="confirm-password" required>
+  
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+  </section>
+
+</form>
+</body>
+</html>
